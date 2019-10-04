@@ -1,0 +1,91 @@
+$darkgrey: rgb(138, 138, 138);
+$lightgrey: rgb(231, 230, 230);
+$orange: rgb(35, 192, 231);
+
+html,
+body {
+	font-family: sans-serif;
+	width: 100%;
+	height: 100%;
+	background-color: antiquewhite;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	margin: 4px;
+	font-size: 1.1rem !important;
+}
+
+button:focus {
+	outline: 0;
+}
+
+button:hover {
+	transform: scale(1.02);
+}
+
+.skeleton {
+	height: 500px;
+	width: 300px;
+	background-color: black;
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); //4 columns
+	grid-template-rows: repeat(7, 1fr);
+
+	.screen {
+		position: relative;
+		grid-column: 1 / span 4;
+		grid-row: 1 / span 2;
+		background-color: black;
+		color: white;
+		font-size: 50px !important;
+
+		.container {
+			position: absolute;
+			display: inline-flex;
+			height: auto;
+			width: auto;
+			bottom: 0px;
+			right: 15px;
+		}
+	}
+
+	.zero {
+		grid-column: 1 / span 2;
+		grid-row: 7 / span 1;
+		//border-radius: 70px;
+	}
+
+	.zero,
+	.decimal,
+	.one,
+	.two,
+	.three,
+	.four,
+	.five,
+	.six,
+	.seven,
+	.eight,
+	.nine {
+		background-color: $darkgrey;
+		//border-color: $darkgrey;
+	}
+
+	.divide,
+	.multiply,
+	.minus,
+	.add,
+	.equals {
+		background-color: $orange;
+		//border-color: $orange;
+	}
+
+	.ac,
+	.pm,
+	.percentage {
+		background-color: $lightgrey;
+		//border-color: $lightgrey;
+	}
+}
